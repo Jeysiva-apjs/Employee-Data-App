@@ -16,6 +16,7 @@ public class MainClass {
 			
 			boolean isRunning = true;
 			while (isRunning) {
+				System.out.println();
 				System.out.println("Enter Choice");
 				System.out.println("1. Insert");
 				System.out.println("2. Select all");
@@ -23,13 +24,14 @@ public class MainClass {
 				System.out.println("4. Delete employee");
 				System.out.println("5. Update Employee");
 				System.out.println("6. Exit");
+				System.out.println();
 
 				int choice = scan.nextInt();
 				scan.nextLine();
 
 				switch (choice) {
 				case 1:
-					System.out.println("Enter name, address and salary");
+					System.out.println("Enter name, address and salary: ");
 					Employee employee = new Employee(scan.nextLine(), scan.nextLine(), scan.nextDouble());
 					databaseService.insertEmployee(employee);
 					break;
@@ -37,15 +39,15 @@ public class MainClass {
 					databaseService.getAllEmployee();
 					break;
 				case 3:
-					System.out.println("Enter ID of an employee: ");
+					System.out.print("Enter ID of an employee: ");
 					databaseService.getEmployeeById(scan.nextInt());
 					break;
 				case 4:
-					System.out.println("Enter ID of an employee: ");
+					System.out.print("Enter ID of an employee: ");
 					databaseService.deleteEmployeeById(scan.nextInt());
 					break;
 				case 5:
-					System.out.println("Enter ID of an employee: ");
+					System.out.print("Enter ID of an employee: ");
 					int updateId = scan.nextInt();
 					scan.nextLine();
 					boolean isFound = databaseService.getEmployeeById(updateId);

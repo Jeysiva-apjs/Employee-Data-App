@@ -104,6 +104,7 @@ public class DatabaseService {
 	}
 
 	private void printEmployee(Employee employee) {
+		System.out.println();
 		System.out.println("Employee Id: " + employee.getEmployeeId());
 		System.out.println("Employee Name: " + employee.getEmployeeName());
 		System.out.println("Employee Address: " + employee.getEmployeeAddress());
